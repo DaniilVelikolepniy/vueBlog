@@ -8,31 +8,31 @@
     </div>
     <div class="main">
       <div class="bodyTab" id="tab1">
-        <img src="@/assets/images/0.jpg" alt="" class="cats">
-        <img src="@/assets/images/1.jpg" alt="" class="cats">
-        <img src="@/assets/images/2.jpg" alt="" class="cats">
-        <img src="@/assets/images/3.jpg" alt="" class="cats">
-        <img src="@/assets/images/4.jpg" alt="" class="cats">
-        <img src="@/assets/images/5.jpg" alt="" class="cats">
-        <img src="@/assets/images/6.jpg" alt="" class="cats">
-        <img src="@/assets/images/7.jpg" alt="" class="cats">
-        <img src="@/assets/images/8.jpg" alt="" class="cats">
-        <img src="@/assets/images/9.jpg" alt="" class="cats">
-        <img src="@/assets/images/10.jpg" alt="" class="cats">
-        <img src="@/assets/images/11.jpg" alt="" class="cats">
-        <img src="@/assets/images/12.jpg" alt="" class="cats">
-        <img src="@/assets/images/13.jpg" alt="" class="cats">
-        <img src="@/assets/images/14.jpg" alt="" class="cats">
-        <img src="@/assets/images/15.jpg" alt="" class="cats">
-        <img src="@/assets/images/16.jpg" alt="" class="cats">
-        <img src="@/assets/images/17.jpg" alt="" class="cats">
-        <img src="@/assets/images/18.jpg" alt="" class="cats">
-        <img src="@/assets/images/19.jpg" alt="" class="cats">
-        <img src="@/assets/images/20.jpg" alt="" class="cats">
-        <img src="@/assets/images/21.jpg" alt="" class="cats">
-        <img src="@/assets/images/22.jpg" alt="" class="cats">
-        <img src="@/assets/images/23.jpg" alt="" class="cats">
-        <img src="@/assets/images/24.jpg" alt="" class="cats">
+        <img src="@/assets/images/0.jpg" alt="" class="images">
+        <img src="@/assets/images/1.jpg" alt="" class="images">
+        <img src="@/assets/images/2.jpg" alt="" class="images">
+        <img src="@/assets/images/3.jpg" alt="" class="images">
+        <img src="@/assets/images/4.jpg" alt="" class="images">
+        <img src="@/assets/images/5.jpg" alt="" class="images">
+        <img src="@/assets/images/6.jpg" alt="" class="images">
+        <img src="@/assets/images/7.jpg" alt="" class="images">
+        <img src="@/assets/images/8.jpg" alt="" class="images">
+        <img src="@/assets/images/9.jpg" alt="" class="images">
+        <img src="@/assets/images/10.jpg" alt="" class="images">
+        <img src="@/assets/images/11.jpg" alt="" class="images">
+        <img src="@/assets/images/12.jpg" alt="" class="images">
+        <img src="@/assets/images/13.jpg" alt="" class="images">
+        <img src="@/assets/images/14.jpg" alt="" class="images">
+        <img src="@/assets/images/15.jpg" alt="" class="images">
+        <img src="@/assets/images/16.jpg" alt="" class="images">
+        <img src="@/assets/images/17.jpg" alt="" class="images">
+        <img src="@/assets/images/18.jpg" alt="" class="images">
+        <img src="@/assets/images/19.jpg" alt="" class="images">
+        <img src="@/assets/images/20.jpg" alt="" class="images">
+        <img src="@/assets/images/21.jpg" alt="" class="images">
+        <img src="@/assets/images/22.jpg" alt="" class="images">
+        <img src="@/assets/images/23.jpg" alt="" class="images">
+        <img src="@/assets/images/24.jpg" alt="" class="images">
       </div>
       <div class="bodyTab" id="tab2">
         <img src="../assets/_1_.jpg" alt="">
@@ -138,7 +138,7 @@ export default {
       grid-row-gap: 10px;
       overflow-y: auto;
 
-      .cats {
+      .images {
         display: block;
         margin: auto;
         width: 200px;

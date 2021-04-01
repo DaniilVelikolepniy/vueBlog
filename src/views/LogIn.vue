@@ -33,7 +33,7 @@
       </span>
       <span class="recoverLink">
         <label>
-          <p>Забыли пароль?</p>
+          <p v-on:click="goToRecovery">Забыли пароль?</p>
         </label>
       </span>
       <span class="form">
@@ -82,6 +82,9 @@ export default {
     },
     goToChekIn () {
       this.$router.push({ name: 'chekIn' })
+    },
+    goToRecovery () {
+      this.$router.push({ name: 'recovery' })
     }
   }
 }
