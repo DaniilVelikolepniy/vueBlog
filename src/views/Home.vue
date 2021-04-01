@@ -8,31 +8,31 @@
     </div>
     <div class="main">
       <div class="bodyTab" id="tab1">
-        <img src="@/assets/cats/cat0.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat1.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat2.jpeg" alt="" class="cats">
-        <img src="@/assets/cats/cat3.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat4.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat5.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat6.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat7.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat8.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat9.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat10.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat11.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat12.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat13.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat14.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat15.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat16.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat17.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat18.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat19.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat20.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat21.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat22.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat23.jpg" alt="" class="cats">
-        <img src="@/assets/cats/cat24.jpg" alt="" class="cats">
+        <img src="@/assets/images/0.jpg" alt="" class="cats">
+        <img src="@/assets/images/1.jpg" alt="" class="cats">
+        <img src="@/assets/images/2.jpg" alt="" class="cats">
+        <img src="@/assets/images/3.jpg" alt="" class="cats">
+        <img src="@/assets/images/4.jpg" alt="" class="cats">
+        <img src="@/assets/images/5.jpg" alt="" class="cats">
+        <img src="@/assets/images/6.jpg" alt="" class="cats">
+        <img src="@/assets/images/7.jpg" alt="" class="cats">
+        <img src="@/assets/images/8.jpg" alt="" class="cats">
+        <img src="@/assets/images/9.jpg" alt="" class="cats">
+        <img src="@/assets/images/10.jpg" alt="" class="cats">
+        <img src="@/assets/images/11.jpg" alt="" class="cats">
+        <img src="@/assets/images/12.jpg" alt="" class="cats">
+        <img src="@/assets/images/13.jpg" alt="" class="cats">
+        <img src="@/assets/images/14.jpg" alt="" class="cats">
+        <img src="@/assets/images/15.jpg" alt="" class="cats">
+        <img src="@/assets/images/16.jpg" alt="" class="cats">
+        <img src="@/assets/images/17.jpg" alt="" class="cats">
+        <img src="@/assets/images/18.jpg" alt="" class="cats">
+        <img src="@/assets/images/19.jpg" alt="" class="cats">
+        <img src="@/assets/images/20.jpg" alt="" class="cats">
+        <img src="@/assets/images/21.jpg" alt="" class="cats">
+        <img src="@/assets/images/22.jpg" alt="" class="cats">
+        <img src="@/assets/images/23.jpg" alt="" class="cats">
+        <img src="@/assets/images/24.jpg" alt="" class="cats">
       </div>
       <div class="bodyTab" id="tab2">
         <img src="../assets/_1_.jpg" alt="">
