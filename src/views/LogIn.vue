@@ -13,13 +13,13 @@
       <span class="form">
         <label>
           Введите e-mail:
-          <input
-            v-model="email"
-            type="text"
-            placeholder="primer@123.ru"
-            class="userText"
-          />
-        </label>
+            <input
+              v-model="email"
+              type="text"
+              placeholder="primer@123.ru"
+              class="userText"
+            />
+          </label>
       </span>
       <span class="form">
         <label>
@@ -59,6 +59,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'LogIn',
   data: () => ({

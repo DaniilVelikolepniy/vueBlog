@@ -64,6 +64,7 @@
         <label>
           <br>
           <input
+            v-on:click="goToLogIn"
             type="button"
             value="Зарегестрироваться"
             class="button"
@@ -75,10 +76,34 @@
 </template>
 
 <script>
+// import { validationMixin } from 'vuelidate'
+// import { required, sameAs, minLength } from 'vuelidate/lib/validators'
+// import { email, required, minLength } from '@vuelidate/validators'
+
 export default {
+  // mixins: [validationMixin],
   name: 'chekIn',
+  // data: () => ({
+  //   // return {}
+  //   $v: {
+  //     rootObjectKey: '$v',
+  //     maxDepth: 2
+  //   },
+  //   rootObjectKey: '$v',
+  //   password: '',
+  //   repeatPassword: ''
+  // }),
   data: () => ({}),
   methods: {
+    // validations: {
+    //   password: {
+    //     required,
+    //     minLength: minLength(6)
+    //   },
+    //   repeatPassword: {
+    //     sameAsPassword: sameAs('password')
+    //   }
+    // },
     goToLogIn () {
       this.$router.push({ name: 'LogIn' })
     }

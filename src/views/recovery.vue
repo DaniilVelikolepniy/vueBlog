@@ -1,4 +1,4 @@
-<template>
+<template xmlns:v-bind="http://www.w3.org/1999/html">
   <div class="bodyRecovery ">
     <h1 class="header">Восстановление пароля</h1>
     <main class="main">
@@ -6,14 +6,16 @@
         <label>
           Введите e-mail:<br>
           <input
-            type="text"
+            v-model.trim="valName"
+            @input="v$.$touch()"
+            type="email"
             class="userText"
             placeholder="primer@123.ru"
           />
         </label>
       </span>
       <span class="form">
-        <label>
+        <label class="buttonParent">
           <input
             v-on:click="reestablish"
             type="button"
@@ -27,9 +29,14 @@
 </template>
 
 <script>
+// import { useVuelidate } from '@vuelidate/core'
+// import { email, required } from '@vuelidate/validators'
+
 export default {
   name: 'recovery',
-  data: () => ({}),
+  data: () => ({
+    email: ''
+  }),
   methods: {
     reestablish () {
       this.$router.push({ name: 'LogIn' })
@@ -75,9 +82,11 @@ export default {
       font-size: 18px;
       color: @color;
 
+      .buttonParent {
+        padding-left: calc(30% - 140px);
+
       .button {
-        display: block;
-        margin: auto;
+        display: inline-block;
         height: 45px;
         width: 140px;
         border: none;
@@ -93,6 +102,7 @@ export default {
         border-radius: 15px;
         box-shadow: 2px 2px 4px @shadow;
         transition: all 1s ease;
+      }
       }
 
       .userText {

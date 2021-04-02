@@ -1,18 +1,16 @@
 <template>
   <div class="home">
+    <h1 class="header">Картинки</h1>
     <div class="tabButtons">
-      <label class="tabButton" for="tab1" v-on:click="Swith('tab1')">Cats</label>
-      <label class="tabButton" for="tab2" v-on:click="Swith('tab2')">Image Map</label>
-      <label class="tabButton" for="tab3" v-on:click="Swith('tab3')">My page</label>
-      <label class="tabButton" for="tab4" v-on:click="Swith('tab4')">User page</label>
+      <label class="tabButton" for="tab1" v-on:click="Swith('tab1')">Горы</label>
+      <label class="tabButton" for="tab2" v-on:click="Swith('tab2')">Пейзажи</label>
+      <label class="tabButton" for="tab3" v-on:click="Swith('tab3')">Море</label>
+      <label class="tabButton" for="tab4" v-on:click="Swith('tab4')">Животные</label>
     </div>
     <div class="main">
       <div class="bodyTab" id="tab1">
         <img src="@/assets/images/0.jpg" alt="" class="images">
         <img src="@/assets/images/1.jpg" alt="" class="images">
-        <img src="@/assets/images/2.jpg" alt="" class="images">
-        <img src="@/assets/images/3.jpg" alt="" class="images">
-        <img src="@/assets/images/4.jpg" alt="" class="images">
         <img src="@/assets/images/5.jpg" alt="" class="images">
         <img src="@/assets/images/6.jpg" alt="" class="images">
         <img src="@/assets/images/7.jpg" alt="" class="images">
@@ -35,13 +33,16 @@
         <img src="@/assets/images/24.jpg" alt="" class="images">
       </div>
       <div class="bodyTab" id="tab2">
-        <img src="../assets/_1_.jpg" alt="">
+        <img src="@/assets/images/2.jpg" alt="" class="images">
+        <img src="@/assets/images/3.jpg" alt="" class="images">
+        <img src="@/assets/images/_1_.jpg" alt="" class="images">
       </div>
       <div class="bodyTab" id="tab3">
-        <img src="../assets/_7_.jpg" alt="">
+        <img src="@/assets/images/_7_.jpg" alt="" class="images">
       </div>
       <div class="bodyTab" id="tab4">
-        <img src="../assets/bg_4.jpg" alt="">
+        <img src="@/assets/images/4.jpg" alt="" class="images">
+        <img src="@/assets/bg_4.jpg" alt="" class="images">
       </div>
     </div>
   </div>
@@ -74,11 +75,22 @@ export default {
 
   .home {
     display: grid;
-    margin: -100vh 0 0 15vw;
+    margin: -100vh auto auto 14vw;
     grid-template-columns: 85vw;
-    grid-template-rows: 1fr 60vh;
-    row-gap: 20px;
+    grid-template-rows: 10vh 10vh 60vh;
+    //row-gap: 5vh;
     color: @color;
+
+    .header {
+      display: block;
+      margin: 15px auto;
+      padding: 5px;
+      width: fit-content;
+      border-radius: 15px;
+      box-shadow: 5px 5px 35px black;
+      color: @color;
+      background-image: url("../assets/bg_1.jpg");
+    }
 
   .tabButtons {
     display: flex;
@@ -111,32 +123,22 @@ export default {
     display: block;
     margin: auto;
     padding: 25px;
-    width: 70vw;
-    min-height: 60vh;
+    width: 80vw;
+    height: 60vh;
     border-radius: 2em;
     background-color: @background;
     box-shadow: 0 0 10px @shadow;
 
     .bodyTab {
       display: none;
-      margin: auto;
-      width: 100%;
-      height: 80vh;
-
-      img {
-        display: block;
-        margin: auto;
-        width: 30%;
-      }
-    }
-
-    #tab1 {
-      display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-column-gap: 10px;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-row-gap: 10px;
       overflow-y: auto;
+      margin: auto;
+      width: 100%;
+      height: 60vh;
 
       .images {
         display: block;

@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <div class="UserInformation">
-      <img src="@/assets/_4_.jpg" alt="">
+      <img src="@/assets/images/_4_.jpg" alt="">
       <p>
         UserName
       </p>
@@ -37,7 +37,7 @@ body {
 
     #nav {
       display: grid;
-      width: 10vw;
+      width: 12vw;
       grid-template-rows: 25vh 75vh;
       background-image: url("assets/bg_1.jpg");
       box-shadow: 0 2px 15px black;
