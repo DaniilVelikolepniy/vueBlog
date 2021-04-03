@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import image from '../views/image.vue'
 import LogIn from '../views/LogIn'
 import chekIn from '../views/chekIn'
 import recovery from '../views/recovery'
@@ -7,8 +7,8 @@ import recovery from '../views/recovery'
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'image',
+    component: image
   },
   {
     path: '/LogIn',

@@ -26,29 +26,37 @@
         <label>
           Введите почту:
           <input
+            v-model.trim.lazy="v$.form.email.$model"
             type="text"
             placeholder="primer@mail.123"
             class="userText"
           />
         </label>
+        <div class="error" v-if="v$.form.email.required.$invalid">Введите почту</div>
+        <div class="error" v-if="v$.form.email.email.$invalid">Введит опечатались указывая почту</div>
       </span>
       <span class="form">
         <label>
           Введите пароль:
           <input
+            v-model.trim.lazy="v$.form.password.$model"
             type="password"
             class="userText"
           />
         </label>
+        <div class="error" v-if="v$.form.password.required.$invalid">Вы не ввели пароль.</div>
+        <div class="error" v-if="v$.form.password.minLength.$invalid">Пароль должен иметь минимум {{ v$.form.password.minLength.$params.min }} символов.</div>
       </span>
       <span class="form">
         <label>
           Подтвердите пароль:
           <input
+            v-model.trim.lazy="v$.form.repeatPassword.$model"
             type="password"
             class="userText"
           />
         </label>
+        <div class="error" v-if="v$.form.repeatPassword.sameAs.$invalid">Пароли должны совпадать.</div>
       </span>
       <span class="form">
         <label>
@@ -76,34 +84,36 @@
 </template>
 
 <script>
-// import { validationMixin } from 'vuelidate'
-// import { required, sameAs, minLength } from 'vuelidate/lib/validators'
-// import { email, required, minLength } from '@vuelidate/validators'
+import { required, email, sameAs, minLength } from '@vuelidate/validators'
+import { useVuelidate } from '@vuelidate/core'
 
 export default {
-  // mixins: [validationMixin],
   name: 'chekIn',
-  // data: () => ({
-  //   // return {}
-  //   $v: {
-  //     rootObjectKey: '$v',
-  //     maxDepth: 2
-  //   },
-  //   rootObjectKey: '$v',
-  //   password: '',
-  //   repeatPassword: ''
-  // }),
-  data: () => ({}),
+  data: () => ({
+    form: {
+      name: '',
+      email: '',
+      password: '',
+      repeatPassword: ''
+    }
+  }),
+  setup: () => ({ v$: useVuelidate() }),
+  validations () {
+    return {
+      form: {
+        name: { required },
+        email: { required, email },
+        password: {
+          required,
+          minLength: minLength(6)
+        },
+        repeatPassword: {
+          sameAs: sameAs('password')
+        }
+      }
+    }
+  },
   methods: {
-    // validations: {
-    //   password: {
-    //     required,
-    //     minLength: minLength(6)
-    //   },
-    //   repeatPassword: {
-    //     sameAsPassword: sameAs('password')
-    //   }
-    // },
     goToLogIn () {
       this.$router.push({ name: 'LogIn' })
     }
@@ -152,10 +162,10 @@ export default {
   .main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px 80px 80px 80px 80px 80px;
     margin: 15px auto;
     padding: 10px;
-    width: 20vw;
+    width: 50vw;
     height: auto;
     background-image: url("../assets/bg_1.jpg");
     border-radius: 25px;
@@ -184,6 +194,11 @@ export default {
         border-radius: 15px;
         box-shadow: 2px 2px 4px @shadow;
         transition: all 1s ease;
+      }
+
+      .error {
+        font-size: 16px;
+        color: blue;
       }
 
       .userText {

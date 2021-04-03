@@ -76,7 +76,7 @@ export default {
     LogIn () {
       const isValidEmail = this.validate(this.email)
       if (isValidEmail) {
-        this.$router.push({ name: 'Home' })
+        this.$router.push({ name: 'image' })
       } else {
         alert('Ошибка в наисании e-mail')
       }
