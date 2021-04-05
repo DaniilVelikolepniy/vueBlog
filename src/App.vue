@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <div class="UserInformation">
-      <img src="@/assets/images/_4_.jpg" alt="">
+      <img src="@/assets/images/people/_4_.jpg" alt="">
       <p>
         UserName
       </p>
