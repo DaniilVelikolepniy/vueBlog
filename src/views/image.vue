@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <pre style="background-color: white; font-size: 1.2em; height: 100vh">
+      {{ this.$store.state.user }}
+    </pre>
     <h1 class="header">Картинки</h1>
     <div class="tabButtons">
       <label class="tabButton" for="tab1" v-on:click="Swith('tab1')">Горы</label>

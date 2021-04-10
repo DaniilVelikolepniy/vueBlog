@@ -11,12 +11,14 @@
     "@vuelidate/core": "*",
     "@vuelidate/validators": "*",
     "core-js": "^3.6.5",
+    "firebase": "^8.3.3",
     "vee-validate": "^3.4.5",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuejs-validators": "^1.1.7",
     "vuelidate": "^0.7.6",
-    "vuex": "^4.0.0-0"
+    "vuex": "^4.0.0-0",
+    "vuex-persistedstate": "*"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

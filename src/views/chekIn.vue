@@ -45,7 +45,9 @@
           />
         </label>
         <div class="error" v-if="v$.form.password.required.$invalid">Вы не ввели пароль.</div>
-        <div class="error" v-if="v$.form.password.minLength.$invalid">Пароль должен иметь минимум {{ v$.form.password.minLength.$params.min }} символов.</div>
+        <div class="error" v-if="v$.form.password.minLength.$invalid">Пароль должен иметь минимум {{
+            v$.form.password.minLength.$params.min
+          }} символов.</div>
       </span>
       <span class="form">
         <label>
@@ -72,7 +74,7 @@
         <label>
           <br>
           <input
-            v-on:click="goToLogIn"
+            v-on:click="checkIn"
             type="button"
             value="Зарегестрироваться"
             class="button"
@@ -86,6 +88,7 @@
 <script>
 import { required, email, sameAs, minLength } from '@vuelidate/validators'
 import { useVuelidate } from '@vuelidate/core'
+import firebase from 'firebase/app'
 
 export default {
   name: 'chekIn',
@@ -102,7 +105,10 @@ export default {
     return {
       form: {
         name: { required },
-        email: { required, email },
+        email: {
+          required,
+          email
+        },
         password: {
           required,
           minLength: minLength(6)
@@ -114,6 +120,23 @@ export default {
     }
   },
   methods: {
+    checkIn () {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(this.form.email, this.form.password)
+        .then(data => {
+          data.user
+            .updateProfile({
+              displayName: this.form.name
+            })
+            .then(() => {
+              this.$router.push({ name: 'LogIn' })
+            })
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    },
     goToLogIn () {
       this.$router.push({ name: 'LogIn' })
     }
@@ -153,6 +176,7 @@ export default {
       text-shadow: 4px 4px 3px @shadow;
       cursor: pointer;
     }
+
     .router:hover {
       text-shadow: 1px 1px 5px @shadow;
       transition: all 1s ease;
@@ -190,6 +214,7 @@ export default {
         background-color: @background;
         box-shadow: 5px 5px 7px @shadow;
       }
+
       .button:hover {
         border-radius: 15px;
         box-shadow: 2px 2px 4px @shadow;
