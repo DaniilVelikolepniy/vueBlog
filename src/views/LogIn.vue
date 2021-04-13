@@ -64,7 +64,7 @@ import firebase from 'firebase/app'
 export default {
   name: 'LogIn',
   data: () => ({
-    logIn: '',
+    // logIn: '',
     pass: '',
     email: ''
   }),

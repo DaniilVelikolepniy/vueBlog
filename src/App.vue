@@ -1,11 +1,11 @@
 <template>
   <div class="nav">
-    <!--    <div v-if="this.$store.state.loggedIn">-->
-    <!--      <router-link v-bind:to="{name: 'LogIn'}" class="link">Выход</router-link>-->
-    <!--    </div>-->
-    <!--    <router-link v-else v-bind:to="{name: 'LogIn'}" class="link">Вход</router-link>-->
+    <!--        <div v-if="this.$store.state.loggedIn">-->
+    <!--          <router-link v-bind:to="{name: 'LogIn'}" class="link">Выход</router-link>-->
+    <!--        </div>-->
+    <!--        <router-link v-else v-bind:to="{name: 'LogIn'}" class="link">Вход</router-link>-->
     <router-link v-bind:to="{name: 'LogIn'}" class="link">
-      <p v-if="this.$store.state.loggedIn">Выход</p>
+      <p v-if="this.$store.state.user.loggedIn" @click="this.$store.commit('SET_LOGGED_IN', false)">Выход</p>
       <p v-else>Вход</p>
     </router-link>
     <router-link to="/" class="link">Картинки</router-link>
