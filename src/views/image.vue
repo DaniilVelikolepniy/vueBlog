@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <pre style="background-color: white; font-size: 1.2em; height: 100vh">
-      {{ this.$store.state.user }}
-    </pre>
+<!--    <pre style="background-color: white; font-size: 1.2em; height: 100vh">-->
+<!--      {{ this.$store.state.user }}-->
+<!--    </pre>-->
     <h1 class="header">Картинки</h1>
     <div class="tabButtons">
       <label class="tabButton" for="tab1" v-on:click="Swith('tab1')">Горы</label>
@@ -147,9 +147,6 @@
         <img src="@/assets/images/animals/24.jpg" alt="" class="images">
         <img src="@/assets/images/animals/25.jpg" alt="" class="images">
         <img src="@/assets/images/animals/26.jpg" alt="" class="images">
-        <img src="@/assets/images/animals/27.jpg" alt="" class="images">
-        <img src="@/assets/images/animals/28.jpg" alt="" class="images">
-        <img src="@/assets/images/animals/29.jpg" alt="" class="images">
       </div>
       <div class="bodyTab" id="tab5">
         <img src="@/assets/images/cristmas/0.jpg" alt="" class="images">

@@ -1,15 +1,14 @@
 <template>
-  <div id="nav">
-    <div class="UserInformation">
-      <img src="@/assets/images/people/_4_.jpg" alt="">
-      <p>
-        UserName
-      </p>
-    </div>
-    <nav class="menu">
-      <router-link to="/">Картинки</router-link>
-      <router-link to="/LogIn">Вход</router-link>
-    </nav>
+  <div class="nav">
+    <!--    <div v-if="this.$store.state.loggedIn">-->
+    <!--      <router-link v-bind:to="{name: 'LogIn'}" class="link">Выход</router-link>-->
+    <!--    </div>-->
+    <!--    <router-link v-else v-bind:to="{name: 'LogIn'}" class="link">Вход</router-link>-->
+    <router-link v-bind:to="{name: 'LogIn'}" class="link">
+      <p v-if="this.$store.state.loggedIn">Выход</p>
+      <p v-else>Вход</p>
+    </router-link>
+    <router-link to="/" class="link">Картинки</router-link>
   </div>
   <router-view/>
 </template>
@@ -22,10 +21,10 @@
 body {
   margin: 0;
   -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* Internet Explorer/Edge */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -35,47 +34,31 @@ body {
     min-height: 100vh;
     background-image: url("assets/kirpitch.png");
 
-    #nav {
+    .nav {
       display: grid;
-      width: 12vw;
-      grid-template-rows: 25vh 75vh;
+      width: 10vw;
+      grid-template-rows: 30px 30px;
+      height: 100vh;
       background-image: url("assets/bg_1.jpg");
       box-shadow: 0 2px 15px black;
 
-      .UserInformation {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 90px 50px;
-        margin: auto 0;
-        img {
-          display: block;
-          margin: auto;
-          border-radius: 5em;
-          width: 90px;
-          height: 90px;
+      .link {
+        display: block;
+        margin: 15px auto auto auto;
+        height: fit-content;
+        text-decoration: none;
+        font-weight: bold;
+        color: @color;
+        text-shadow: 10px 10px 5px @shadow;
+
+        p {
+          margin: 0;
         }
       }
 
-      .menu {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 50px 50px;
-
-        a {
-          text-decoration: none;
-          font-weight: bold;
-          color: @color;
-          text-shadow: 10px 10px 5px @shadow;
-
-          //&.router-link-exact-active {
-          //
-          //}
-        }
-
-        a:hover {
-          text-shadow: 1px 1px 12px rgba(68, 28, 28, 0.75);
-          transition: all 1s ease;
-        }
+      .link:hover {
+        text-shadow: 1px 1px 12px rgba(68, 28, 28, 0.75);
+        transition: all 1s ease;
       }
     }
   }
