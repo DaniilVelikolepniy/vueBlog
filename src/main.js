@@ -6,8 +6,7 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBwLfV18wfmfb-VdqjpGGwmZaMnUc6b5gI',
-  // apiKey: process.env.FIREBASE_KEY,
+  apiKey: process.env.FIREBASE_KEY,
   authDomain: 'portfolio-8ed1f.firebaseapp.com',
   projectId: 'portfolio-8ed1f',
   storageBucket: 'portfolio-8ed1f.appspot.com',
