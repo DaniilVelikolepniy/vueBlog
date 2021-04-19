@@ -10,50 +10,52 @@
       </h2>
     </header>
     <div class="main">
-      <span class="form">
-        <label>
-          Введите e-mail:
+      <form action="get" class="form">
+        <span class="formItem">
+          <label>
+            Введите e-mail:
+              <input
+                v-model="email"
+                type="text"
+                placeholder="primer@123.ru"
+                class="userText"
+              />
+            </label>
+        </span>
+        <span class="formItem">
+          <label>
+            Введите пароль:
             <input
-              v-model="email"
-              type="text"
-              placeholder="primer@123.ru"
+              v-model="pass"
+              type="password"
               class="userText"
             />
           </label>
-      </span>
-      <span class="form">
-        <label>
-          Введите пароль:
-          <input
-            v-model="pass"
-            type="password"
-            class="userText"
-          />
-        </label>
-      </span>
-      <span class="recoverLink">
-        <label v-on:click="goToRecovery">
-          Забыли пароль?
-        </label>
-      </span>
-      <span class="form">
-        <label>
-          <input
-            type="checkbox"
-          />
-          запомнить меня
-        </label>
-      </span>
-      <span class="form">
-        <label>
-          <input
-            v-on:click="LogIn"
-            type="button"
-            value="Войти"
-            class="button"
-          />
-        </label>
-      </span>
+        </span>
+        <span class="recoverLink">
+          <p v-on:click="goToRecovery">
+            Забыли пароль?
+          </p>
+        </span>
+        <span class="formItem">
+          <label>
+            <input
+              type="checkbox"
+            />
+            запомнить меня
+          </label>
+        </span>
+        <span class="formItem">
+          <label>
+            <input
+              v-on:click="LogIn"
+              type="button"
+              value="Войти"
+              class="button"
+            />
+          </label>
+        </span>
+      </form>
     </div>
   </div>
 </template>
@@ -110,12 +112,14 @@ export default {
 
 .bodyLogIn {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 120px calc(100vh - 120px);
   width: 90vw;
+  min-height: 100vh;
   margin: -100vh 0 0 10vw;
 
   .header {
     display: grid;
-    grid-template-rows: 1fr;
     grid-template-columns: 70px 20px 150px;
     margin: 30px auto;
     padding: 5px;
@@ -143,51 +147,55 @@ export default {
   }
 
   .main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 80px 80px 25px 40px 80px;
     margin: 15px auto;
     width: 20vw;
     padding: 10px;
     height: auto;
-    background-image: url("../assets/bg_1.jpg");
-    border-radius: 25px;
-    box-shadow: 5px 5px 35px black;
 
     .form {
-      display: block;
-      margin: 15px auto;
-      font-size: 18px;
-      color: @color;
-      text-shadow: 5px 5px 2px @shadow;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 80px 80px 25px 40px 80px;
+      height: fit-content;
+      background-image: url("../assets/bg_1.jpg");
+      border-radius: 25px;
+      box-shadow: 5px 5px 35px black;
 
-      .button {
+      .formItem {
         display: block;
-        margin: auto;
-        height: 45px;
-        width: 65px;
-        border: none;
-        border-radius: 10px;
-        font-size: 16px;
-        font-weight: bold;
+        margin: 15px auto;
+        font-size: 18px;
         color: @color;
-        background-color: @background;
-        box-shadow: 5px 5px 7px @shadow;
-      }
+        text-shadow: 5px 5px 2px @shadow;
 
-      .button:hover {
-        border-radius: 15px;
-        box-shadow: 2px 2px 4px @shadow;
-        transition: all 1s ease;
-      }
+        .button {
+          display: block;
+          margin: auto;
+          height: 45px;
+          width: 65px;
+          border: none;
+          border-radius: 10px;
+          font-size: 16px;
+          font-weight: bold;
+          color: @color;
+          background-color: @background;
+          box-shadow: 5px 5px 7px @shadow;
+        }
 
-      .userText {
-        display: block;
-        margin: 5px auto;
-        width: 15vw;
-        height: 25px;
-        border: solid 1px @color;
-        border-radius: 5px;
+        .button:hover {
+          border-radius: 15px;
+          box-shadow: 2px 2px 4px @shadow;
+          transition: all 1s ease;
+        }
+
+        .userText {
+          display: block;
+          margin: 5px auto;
+          width: 15vw;
+          height: 25px;
+          border: solid 1px @color;
+          border-radius: 5px;
+        }
       }
     }
 

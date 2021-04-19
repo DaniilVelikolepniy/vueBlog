@@ -12,7 +12,8 @@
       </h2>
     </header>
     <div class="main">
-      <span class="form">
+      <form action="get" class="form">
+      <span class="formItem">
         <label>
           Введите логин:
           <input
@@ -22,7 +23,7 @@
           />
         </label>
       </span>
-      <span class="form">
+        <span class="formItem">
         <label>
           Введите почту:
           <input
@@ -35,7 +36,7 @@
         <div class="error" v-if="v$.form.email.required.$invalid">Введите почту</div>
         <div class="error" v-if="v$.form.email.email.$invalid">Введит опечатались указывая почту</div>
       </span>
-      <span class="form">
+        <span class="formItem">
         <label>
           Введите пароль:
           <input
@@ -49,7 +50,7 @@
             v$.form.password.minLength.$params.min
           }} символов.</div>
       </span>
-      <span class="form">
+        <span class="formItem">
         <label>
           Подтвердите пароль:
           <input
@@ -60,7 +61,7 @@
         </label>
         <div class="error" v-if="v$.form.repeatPassword.sameAs.$invalid">Пароли должны совпадать.</div>
       </span>
-      <span class="form">
+        <span class="formItem">
         <label>
           Введите телефон:
           <input
@@ -70,7 +71,7 @@
           />
         </label>
       </span>
-      <span class="form">
+        <span class="formItem">
         <label>
           <br>
           <input
@@ -81,6 +82,7 @@
           />
         </label>
       </span>
+      </form>
     </div>
   </div>
 </template>
@@ -151,8 +153,12 @@ export default {
 
 .bodyChekIn {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 120px 580px;
   width: 90vw;
-  margin: -100vh 0 0 10vw;
+  min-height: 100vh;
+  //margin: -100vh 0 0 10vw;
+  margin: 0;
 
   .header {
     display: grid;
@@ -184,55 +190,56 @@ export default {
   }
 
   .main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 80px 80px 80px 80px 80px 80px;
-    margin: 15px auto;
-    padding: 10px;
-    width: 50vw;
-    height: auto;
-    background-image: url("../assets/bg_1.jpg");
-    border-radius: 25px;
-    box-shadow: 5px 5px 35px black;
+    margin: 15px auto 35px auto;
 
     .form {
-      display: block;
-      margin: auto;
-      font-size: 18px;
-      color: brown;
+      display: grid;
+      grid-template-columns: 20vw;
+      padding: 10px;
+      grid-template-rows: 85px 85px 85px 85px 85px 85px;
+      background-image: url("../assets/bg_1.jpg");
+      border-radius: 25px;
+      box-shadow: 5px 5px 35px black;
 
-      .button {
+      .formItem {
         display: block;
         margin: auto;
-        height: 45px;
-        width: 190px;
-        border: none;
-        border-radius: 10px;
-        font-size: 16px;
-        font-weight: bold;
-        color: @color;
-        background-color: @background;
-        box-shadow: 5px 5px 7px @shadow;
-      }
+        font-size: 18px;
+        color: brown;
 
-      .button:hover {
-        border-radius: 15px;
-        box-shadow: 2px 2px 4px @shadow;
-        transition: all 1s ease;
-      }
+        .button {
+          display: block;
+          margin: auto;
+          height: 45px;
+          width: 190px;
+          border: none;
+          border-radius: 10px;
+          font-size: 16px;
+          font-weight: bold;
+          color: @color;
+          background-color: @background;
+          box-shadow: 5px 5px 7px @shadow;
+        }
 
-      .error {
-        font-size: 16px;
-        color: blue;
-      }
+        .button:hover {
+          border-radius: 15px;
+          box-shadow: 2px 2px 4px @shadow;
+          transition: all 1s ease;
+        }
 
-      .userText {
-        display: block;
-        margin: 5px auto;
-        width: 15vw;
-        height: 25px;
-        border: solid 1px @color;
-        border-radius: 5px;
+        .error {
+          font-size: 16px;
+          color: blue;
+        }
+
+        .userText {
+          display: block;
+          margin: 5px auto;
+          width: 15vw;
+          height: 25px;
+          border: solid 1px @color;
+          border-radius: 5px;
+        }
       }
     }
   }

@@ -154,7 +154,7 @@
         <img src="@/assets/images/cristmas/2.jpg" alt="" class="images">
         <img src="@/assets/images/cristmas/3.jpg" alt="" class="images">
         <img src="@/assets/images/cristmas/4.jpg" alt="" class="images">
-        <img src="@/assets/images/cristmas/5.png" alt="" class="images">
+        <img src="@/assets/images/cristmas/5.jpg" alt="" class="images">
         <img src="@/assets/images/cristmas/6.jpg" alt="" class="images">
         <img src="@/assets/images/cristmas/7.jpg" alt="" class="images">
         <img src="@/assets/images/cristmas/8.jpg" alt="" class="images">

@@ -1,16 +1,12 @@
 <template>
   <div class="nav">
-    <!--        <div v-if="this.$store.state.loggedIn">-->
-    <!--          <router-link v-bind:to="{name: 'LogIn'}" class="link">Выход</router-link>-->
-    <!--        </div>-->
-    <!--        <router-link v-else v-bind:to="{name: 'LogIn'}" class="link">Вход</router-link>-->
     <router-link v-bind:to="{name: 'LogIn'}" class="link">
       <p v-if="this.$store.state.user.loggedIn" @click="this.$store.commit('SET_LOGGED_IN', false)">Выход</p>
       <p v-else>Вход</p>
     </router-link>
     <router-link to="/" class="link">Картинки</router-link>
   </div>
-  <router-view/>
+  <router-view class="routerView"/>
 </template>
 
 <style lang="less">
@@ -20,32 +16,35 @@
 
 body {
   margin: 0;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Chrome/Safari/Opera */
-  -khtml-user-select: none; /* Konqueror */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
 
   #app {
+    //display: inline-block;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    min-height: 100vh;
+    min-height: 100vh!important;
+    width: 100vw;
     background-image: url("assets/kirpitch.png");
 
     .nav {
       display: grid;
       width: 10vw;
       grid-template-rows: 30px 30px;
-      height: 100vh;
+      min-height: 100vh;
+      float: left;
       background-image: url("assets/bg_1.jpg");
       box-shadow: 0 2px 15px black;
 
       .link {
         display: block;
         margin: 15px auto auto auto;
-        height: fit-content;
+        //height: fit-content;
         text-decoration: none;
         font-weight: bold;
         color: @color;
@@ -61,6 +60,30 @@ body {
         transition: all 1s ease;
       }
     }
+
+    .routerView {
+      float: left;
+      height: 100vh;
+      overflow-y: auto;
+    }
   }
 }
+
+//@media screen and (max-width: 1366px) {
+//  #app {
+//    .nav {
+//      display: flex!important;
+//      flex-direction: row!important;
+//      row-wrap: wrap!important;
+//      justify-content: space-around;
+//      width: 100vw!important;
+//      height: 10px!important;
+//
+//      .link {
+//        margin: 10px!important;
+//        height: 0px!important;
+//      }
+//    }
+//  }
+//}
 </style>
