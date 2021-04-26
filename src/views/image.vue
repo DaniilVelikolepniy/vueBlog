@@ -327,7 +327,7 @@ export default {
     grid-template-rows: 70px calc(100vh - 200px);
 
     .header {
-      margin: 0 auto;
+      display: none!important;
     }
 
     tabs {

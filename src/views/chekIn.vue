@@ -235,7 +235,7 @@ export default {
         .userText {
           display: block;
           margin: 5px auto;
-          width: 15vw;
+          min-width: 150px;
           height: 25px;
           border: solid 1px @color;
           border-radius: 5px;
