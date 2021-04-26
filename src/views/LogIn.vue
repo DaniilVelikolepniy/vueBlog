@@ -68,9 +68,20 @@ export default {
   data: () => ({
     // logIn: '',
     pass: '',
-    email: ''
+    email: '',
+    widthFormForMobile: ''
   }),
   methods: {
+    // mobileForForm () {
+    //   const dinWidth = document.documentElement.clientWidth
+    //   if (dinWidth < 1366) {
+    //     const headerWidth = document.querySelector('.header')
+    //     if (headerWidth.clientWidth) {
+    //       document.querySelector('.main').style.width = 'headerWidth!important'
+    //       document.querySelector('.form').style.width = 'headerWidth!important'
+    //     }
+    //   }
+    // },
     validate (email) {
       console.log(email)
       const re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
@@ -115,7 +126,7 @@ export default {
   grid-template-columns: 1fr;
   grid-template-rows: 120px calc(100vh - 120px);
   width: 90vw;
-  min-height: 100vh;
+  height: 500px;
   margin: -100vh 0 0 10vw;
 
   .header {
@@ -148,14 +159,15 @@ export default {
 
   .main {
     margin: 15px auto;
-    width: 20vw;
+    //width: 20vw;
     padding: 10px;
-    height: auto;
+    height: fit-content;
 
     .form {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 80px 80px 25px 40px 80px;
+      padding: 0 10px;
       height: fit-content;
       background-image: url("../assets/bg_1.jpg");
       border-radius: 25px;
@@ -191,7 +203,7 @@ export default {
         .userText {
           display: block;
           margin: 5px auto;
-          width: 15vw;
+          min-width: 150px;
           height: 25px;
           border: solid 1px @color;
           border-radius: 5px;
@@ -206,6 +218,22 @@ export default {
         color: blue;
         text-decoration: underline;
         margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .bodyLogIn {
+    margin: 0 auto!important;
+    width: 100vw;
+    //height: 500px!important;
+
+    .main {
+      height: fit-content!important;
+
+      .form {
+        min-width: 250px!important;
       }
     }
   }

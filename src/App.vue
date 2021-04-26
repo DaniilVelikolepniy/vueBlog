@@ -28,7 +28,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    min-height: 100vh!important;
+    min-height: 100vh;
     width: 100vw;
     background-image: url("assets/kirpitch.png");
 
@@ -36,7 +36,7 @@ body {
       display: grid;
       width: 10vw;
       grid-template-rows: 30px 30px;
-      min-height: 100vh;
+      height: 100vh;
       float: left;
       background-image: url("assets/bg_1.jpg");
       box-shadow: 0 2px 15px black;
@@ -63,27 +63,34 @@ body {
 
     .routerView {
       float: left;
-      height: 100vh;
+      height: calc(100vh - 70px);
       overflow-y: auto;
     }
   }
 }
 
-//@media screen and (max-width: 1366px) {
-//  #app {
-//    .nav {
-//      display: flex!important;
-//      flex-direction: row!important;
-//      row-wrap: wrap!important;
-//      justify-content: space-around;
-//      width: 100vw!important;
-//      height: 10px!important;
-//
-//      .link {
-//        margin: 10px!important;
-//        height: 0px!important;
-//      }
-//    }
-//  }
-//}
+@media screen and (max-width: 1366px) {
+  #app {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px calc(100vh - 70px);
+
+    .nav {
+      display: flex!important;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100vw!important;
+      height: 50px!important;
+
+      .link {
+        margin: auto!important;
+      }
+
+      .routerView {
+        float: none!important;
+      }
+    }
+  }
+}
 </style>
