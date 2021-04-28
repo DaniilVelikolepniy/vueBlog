@@ -44,7 +44,6 @@ body {
       .link {
         display: block;
         margin: 15px auto auto auto;
-        //height: fit-content;
         text-decoration: none;
         font-weight: bold;
         color: @color;
@@ -63,7 +62,7 @@ body {
 
     .routerView {
       float: left;
-      height: calc(100vh - 70px);
+      height: 100vh;
       overflow-y: auto;
     }
   }
@@ -73,23 +72,24 @@ body {
   #app {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 70px calc(100vh - 70px);
+    //grid-template-rows: 50px calc(100vh - 50px);
 
     .nav {
-      display: flex!important;
+      display: flex !important;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
-      width: 100vw!important;
-      height: 50px!important;
+      width: 100vw !important;
+      height: 50px !important;
 
       .link {
-        margin: auto!important;
+        margin: auto !important;
       }
+    }
 
-      .routerView {
-        float: none!important;
-      }
+    .routerView {
+      float: none !important;
+      width: 100vw !important;
     }
   }
 }

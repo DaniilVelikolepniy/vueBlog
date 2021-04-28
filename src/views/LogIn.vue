@@ -10,7 +10,7 @@
       </h2>
     </header>
     <div class="main">
-      <form action="get" class="form">
+      <form class="form">
         <span class="formItem">
           <label>
             Введите e-mail:
@@ -33,9 +33,9 @@
           </label>
         </span>
         <span class="recoverLink">
-          <p v-on:click="goToRecovery">
+          <i class="linkToRecovery" v-on:click="goToRecovery">
             Забыли пароль?
-          </p>
+          </i>
         </span>
         <span class="formItem">
           <label>
@@ -126,8 +126,7 @@ export default {
   grid-template-columns: 1fr;
   grid-template-rows: 120px calc(100vh - 120px);
   width: 90vw;
-  height: 500px;
-  margin: -100vh 0 0 10vw;
+  height: 100vh;
 
   .header {
     display: grid;
@@ -159,16 +158,13 @@ export default {
 
   .main {
     margin: 15px auto;
-    //width: 20vw;
     padding: 10px;
-    height: fit-content;
 
     .form {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 80px 80px 25px 40px 80px;
       padding: 0 10px;
-      height: fit-content;
       background-image: url("../assets/bg_1.jpg");
       border-radius: 25px;
       box-shadow: 5px 5px 35px black;
@@ -214,7 +210,7 @@ export default {
     .recoverLink {
       display: block;
 
-      p {
+      .linkToRecovery {
         color: blue;
         text-decoration: underline;
         margin: 0;
@@ -225,15 +221,14 @@ export default {
 
 @media screen and (max-width: 1366px) {
   .bodyLogIn {
-    margin: 0 auto!important;
-    width: 100vw;
-    //height: 500px!important;
+    margin: 0 auto !important;
+    height: calc(100vh - 50px) !important;
 
     .main {
-      height: fit-content!important;
+      height: fit-content !important;
 
       .form {
-        min-width: 250px!important;
+        min-width: 250px !important;
       }
     }
   }

@@ -12,7 +12,7 @@
       </h2>
     </header>
     <div class="main">
-      <form action="get" class="form">
+      <form class="form">
       <span class="formItem">
         <label>
           Введите логин:
@@ -33,8 +33,8 @@
             class="userText"
           />
         </label>
-        <div class="error" v-if="v$.form.email.required.$invalid">Введите почту</div>
-        <div class="error" v-if="v$.form.email.email.$invalid">Введит опечатались указывая почту</div>
+        <i class="error" v-if="v$.form.email.required.$invalid">Введите почту</i>
+        <i class="error" v-if="v$.form.email.email.$invalid">Вы опечатались указывая почту</i>
       </span>
         <span class="formItem">
         <label>
@@ -45,10 +45,10 @@
             class="userText"
           />
         </label>
-        <div class="error" v-if="v$.form.password.required.$invalid">Вы не ввели пароль.</div>
-        <div class="error" v-if="v$.form.password.minLength.$invalid">Пароль должен иметь минимум {{
+        <i class="error" v-if="v$.form.password.required.$invalid">Вы не ввели пароль.</i>
+        <i class="error" v-if="v$.form.password.minLength.$invalid">Пароль должен иметь минимум {{
             v$.form.password.minLength.$params.min
-          }} символов.</div>
+          }} символов.</i>
       </span>
         <span class="formItem">
         <label>
@@ -59,7 +59,7 @@
             class="userText"
           />
         </label>
-        <div class="error" v-if="v$.form.repeatPassword.sameAs.$invalid">Пароли должны совпадать.</div>
+        <i class="error" v-if="v$.form.repeatPassword.sameAs">Пароли должны совпадать.</i>
       </span>
         <span class="formItem">
         <label>
@@ -73,7 +73,6 @@
       </span>
         <span class="formItem">
         <label>
-          <br>
           <input
             v-on:click="checkIn"
             type="button"
@@ -154,11 +153,10 @@ export default {
 .bodyChekIn {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 120px 580px;
+  grid-template-rows: 120px calc(100vh - 120px);
   width: 90vw;
-  min-height: 100vh;
-  //margin: -100vh 0 0 10vw;
-  margin: 0;
+  height: 100vh;
+  //margin: 0 auto;
 
   .header {
     display: grid;
@@ -190,22 +188,24 @@ export default {
   }
 
   .main {
-    margin: 15px auto 35px auto;
+    margin: 15px auto;
 
     .form {
       display: grid;
-      grid-template-columns: 20vw;
-      padding: 10px;
+      margin: auto;
+      grid-template-columns: 1fr;
       grid-template-rows: 85px 85px 85px 85px 85px 85px;
+      padding: 0 10px 15px 10px;
       background-image: url("../assets/bg_1.jpg");
       border-radius: 25px;
       box-shadow: 5px 5px 35px black;
 
       .formItem {
         display: block;
-        margin: auto;
+        margin: 15px auto;
         font-size: 18px;
-        color: brown;
+        color: @color;
+        text-shadow: 5px 5px 2px @shadow;
 
         .button {
           display: block;
@@ -228,6 +228,13 @@ export default {
         }
 
         .error {
+          display: none;
+          position: fixed;
+          margin: -2.6% auto auto 8%;
+          padding: 3px;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          border-radius: 5px;
+          background-color: white;
           font-size: 16px;
           color: blue;
         }
@@ -240,6 +247,46 @@ export default {
           border: solid 1px @color;
           border-radius: 5px;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .bodyChekIn {
+    height: calc(100vh - 50px) !important;
+
+    .main {
+      height: fit-content !important;
+
+      .form {
+        min-width: 250px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .bodyChekIn {
+    grid-template-rows: 75px calc(100vh - 75px);
+
+    .header {
+      margin:  10px auto 10px auto !important;
+    }
+
+    .main {
+      .form {
+        grid-template-rows: 80px 80px 80px 80px 80px 80px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .bodyChekIn {
+    .main {
+      .form {
+        grid-template-rows: 65px 65px 65px 65px 65px 65px;
       }
     }
   }
