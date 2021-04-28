@@ -6,12 +6,12 @@
     <h1 class="header">Картинки</h1>
     <div class="tabs">
       <div class="tabButtons">
-        <label class="tabButton" for="tab1" v-on:click="new Swith('tab1')">Горы</label>
-        <label class="tabButton" for="tab2" v-on:click="new Swith('tab2')">Пейзажи</label>
-        <label class="tabButton" for="tab3" v-on:click="new Swith('tab3')">Море</label>
-        <label class="tabButton" for="tab4" v-on:click="new Swith('tab4')">Животные</label>
-        <label class="tabButton" for="tab5" v-on:click="new Swith('tab5')">Новогодние</label>
-        <label class="tabButton" for="tab6" v-on:click="new Swith('tab6')">Города</label>
+        <label class="tabButton" for="tab1" v-on:click="Swith('tab1')">Горы</label>
+        <label class="tabButton" for="tab2" v-on:click="Swith('tab2')">Пейзажи</label>
+        <label class="tabButton" for="tab3" v-on:click="Swith('tab3')">Море</label>
+        <label class="tabButton" for="tab4" v-on:click="Swith('tab4')">Животные</label>
+        <label class="tabButton" for="tab5" v-on:click="Swith('tab5')">Новогодние</label>
+        <label class="tabButton" for="tab6" v-on:click="Swith('tab6')">Города</label>
       </div>
       <div class="main">
         <div class="bodyTab" id="tab1">
