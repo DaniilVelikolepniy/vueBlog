@@ -4,14 +4,14 @@
     <!--      {{ this.$store.state.user }}-->
     <!--    </pre>-->
     <h1 class="header">Картинки</h1>
-    <tabs>
+    <div class="tabs">
       <div class="tabButtons">
-        <label class="tabButton" for="tab1" v-on:click="Swith('tab1')">Горы</label>
-        <label class="tabButton" for="tab2" v-on:click="Swith('tab2')">Пейзажи</label>
-        <label class="tabButton" for="tab3" v-on:click="Swith('tab3')">Море</label>
-        <label class="tabButton" for="tab4" v-on:click="Swith('tab4')">Животные</label>
-        <label class="tabButton" for="tab5" v-on:click="Swith('tab5')">Новогодние</label>
-        <label class="tabButton" for="tab6" v-on:click="Swith('tab6')">Города</label>
+        <label class="tabButton" for="tab1" v-on:click="new Swith('tab1')">Горы</label>
+        <label class="tabButton" for="tab2" v-on:click="new Swith('tab2')">Пейзажи</label>
+        <label class="tabButton" for="tab3" v-on:click="new Swith('tab3')">Море</label>
+        <label class="tabButton" for="tab4" v-on:click="new Swith('tab4')">Животные</label>
+        <label class="tabButton" for="tab5" v-on:click="new Swith('tab5')">Новогодние</label>
+        <label class="tabButton" for="tab6" v-on:click="new Swith('tab6')">Города</label>
       </div>
       <div class="main">
         <div class="bodyTab" id="tab1">
@@ -205,7 +205,7 @@
           <img src="@/assets/images/towns/24.jpg" alt="" class="images">
         </div>
       </div>
-    </tabs>
+    </div>
   </div>
 </template>
 
@@ -255,7 +255,7 @@ export default {
     background-image: url("../assets/bg_1.jpg");
   }
 
-  tabs {
+  .tabs {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 70px auto;
@@ -323,14 +323,15 @@ export default {
 @media screen and (max-width: 1366px) {
   .home {
     margin: 0 auto !important;
-    grid-template-columns: 100vw;
-    grid-template-rows: 70px calc(100vh - 200px);
+    height: calc(100vh - 50px)!important;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px calc(100vh - 70px);
 
     .header {
-      display: none!important;
+      display: none !important;
     }
 
-    tabs {
+    .tabs {
       .main {
         margin: 0 auto;
 
@@ -352,7 +353,7 @@ export default {
       box-shadow: 5px 5px 25px black;
     }
 
-    tabs {
+    .tabs {
       .main {
         .bodyTab {
           grid-template-columns: 1fr 1fr;
@@ -364,8 +365,9 @@ export default {
 
 @media screen and (max-width: 748px) {
   .home {
-    tabs {
+    .tabs {
       grid-template-rows: 120px calc(100vh - 100px);
+
       .main {
         .bodyTab {
           grid-template-columns: 1fr;
