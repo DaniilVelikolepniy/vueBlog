@@ -3,10 +3,16 @@ import image from '../views/image.vue'
 import LogIn from '../views/LogIn'
 import chekIn from '../views/chekIn'
 import recovery from '../views/recovery'
+import Home from '../views/Home'
 
 const routes = [
   {
     path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/image',
     name: 'image',
     component: image
   },

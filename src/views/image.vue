@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="imageBody">
     <!--    <pre style="background-color: white; font-size: 1.2em; height: 100vh">-->
     <!--      {{ this.$store.state.user }}-->
     <!--    </pre>-->
@@ -211,7 +211,7 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: 'image',
   data: () => ({
     currentTab: ''
   }),
@@ -234,7 +234,7 @@ export default {
 @shadow: rgba(54, 97, 70, 0.5);
 @color: rgba(116, 40, 24, 1);
 
-.home {
+.imageBody {
   display: grid;
   margin: -100vh auto auto 10vw;
   float: left;
@@ -321,7 +321,7 @@ export default {
 }
 
 @media screen and (max-width: 1366px) {
-  .home {
+  .imageBody {
     margin: 0 auto !important;
     height: calc(100vh - 50px)!important;
     grid-template-columns: 1fr;
@@ -348,7 +348,7 @@ export default {
 }
 
 @media screen and (max-width: 1024px) {
-  .home {
+  .imageBody {
     .header {
       box-shadow: 5px 5px 25px black;
     }
@@ -364,7 +364,7 @@ export default {
 }
 
 @media screen and (max-width: 748px) {
-  .home {
+  .imageBody {
     .tabs {
       grid-template-rows: 120px calc(100vh - 100px);
 
