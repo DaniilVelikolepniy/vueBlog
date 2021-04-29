@@ -4,8 +4,8 @@
     <main class="main">
       <div class="itsMe">
         <img src="../views/@/assets/images/animals/22.jpg" alt="" class="logo">
-        <h2 class="mySurName">My</h2>
-        <h2 class="myName">Name</h2>
+        <h2 class="muFullName mySurName">My</h2>
+        <h2 class="muFullName myName">Name</h2>
       </div>
       <div class="summary">
         Здесь будет некоторая инфа
@@ -75,9 +75,9 @@ export default {
         grid-column-end: 2;
       }
 
-      .mySurName,
-      .myName {
+      .muFullName {
         width: 200px;
+        height: fit-content;
       }
 
       .mySurName {
@@ -108,6 +108,70 @@ export default {
   .bodyHome {
     margin: 0 auto !important;
     height: calc(100vh - 50px) !important;
+
+    .itsMe {
+      grid-template-columns: 100px 150px;
+      column-gap: 20px !important;
+      -moz-column-gap: 20px !important;
+
+      .muFullName {
+        width: 150px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .bodyHome {
+    .itsMe {
+      grid-template-columns: 100px 125px;
+      column-gap: 15px !important;
+
+      .myFullName {
+        width: 125px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 813px) {
+  .bodyHome {
+    .itsMe {
+      grid-template-rows: 45px 45px !important;
+      grid-template-columns: 90px 100px !important;
+      column-gap: 10px;
+      border-radius: 45px 7px 7px 45px !important;
+
+      .logo {
+        width: 90px !important;
+        height: 90px !important;
+      }
+
+      .mySurName,
+      .myName {
+        width: 100px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .bodyHome {
+    .itsMe {
+      //grid-template-rows: 39px 39px !important;
+      grid-column-gap: 5px !important;
+
+      .logo {
+        margin: auto;
+        width: 76px !important;
+        height: 76px !important;
+      }
+
+      .myName,
+      .mySurName {
+        width: 90px !important;
+      }
+    }
   }
 }
 </style>
