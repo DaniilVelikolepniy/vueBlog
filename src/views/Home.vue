@@ -4,13 +4,139 @@
     <main class="main">
       <div class="itsMe">
         <img src="../views/@/assets/images/animals/22.jpg" alt="" class="logo">
-        <h2 class="muFullName mySurName">My</h2>
-        <h2 class="muFullName myName">Name</h2>
+        <h2 class="muFullName myName">Даниил</h2>
+        <h2 class="muFullName mySurName">Должанский</h2>
       </div>
       <div class="summary">
-        Здесь будет некоторая инфа
+        <div class="infoBlock">
+          <h3 class="infoBlockName">
+            Первый блок
+          </h3>
+          <div class="infoBlockText">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="infoBlock">
+          <h3 class="infoBlockName">
+            Второй блок
+          </h3>
+          <div class="infoBlockText">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="infoBlock">
+          <h3 class="infoBlockName">
+            Третий блок
+          </h3>
+          <div class="infoBlockText">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="infoBlock">
+          <h3 class="infoBlockName">
+            Четвёртый блок
+          </h3>
+          <div class="infoBlockText">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="infoBlock">
+          <h3 class="infoBlockName">
+            Пятый блок
+          </h3>
+          <div class="infoBlockText">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="infoBlock">
+          <h3 class="infoBlockName">
+            Шестой блок
+          </h3>
+          <div class="infoBlockText">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="infoBlock">
+          <h3 class="infoBlockName">
+            Седьмой блок
+          </h3>
+          <div class="infoBlockText">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="infoBlock">
+          <h3 class="infoBlockName">
+            Восьмой блок
+          </h3>
+          <div class="infoBlockText">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="infoBlock">
+          <h3 class="infoBlockName">
+            Девятый блок
+          </h3>
+          <div class="infoBlockText">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </main>
+    <div class="footer"></div>
   </div>
 </template>
 
@@ -33,9 +159,9 @@ export default {
 .bodyHome {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 90px calc(100vh - 90px);
+  grid-template-rows: 90px auto 20px;
   width: 90vw;
-  height: 100vh;
+  height: 110vh;
 
   .header {
     border-radius: 5rem;
@@ -43,10 +169,9 @@ export default {
 
   .main {
     position: relative;
-    margin: 0 auto auto auto;
+    margin: auto;
     padding: 10px;
     width: 70vw;
-    height: 700px;
     border-radius: 7px;
     background-image: url("@/assets/images/bg_1.jpg");
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -80,7 +205,7 @@ export default {
         height: fit-content;
       }
 
-      .mySurName {
+      .myName {
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 1;
@@ -88,7 +213,7 @@ export default {
         text-align: left;
       }
 
-      .myName {
+      .mySurName {
         grid-row-start: 2;
         grid-row-end: 3;
         grid-column-start: 2;
@@ -98,10 +223,22 @@ export default {
     }
 
     .summary {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-between;
       margin: 50px auto auto auto;
+
+      .infoBlock {
+        margin: auto auto 15px auto;
+        width: 60vw;
+        border: solid 1px black;
+        border-radius: 25px;
+      }
     }
   }
+
+  .footer {}
 }
 
 @media screen and (max-width: 1366px) {
@@ -147,8 +284,8 @@ export default {
         height: 90px !important;
       }
 
-      .mySurName,
-      .myName {
+      .myName,
+      .mySurName {
         width: 100px !important;
       }
     }
@@ -167,8 +304,8 @@ export default {
         height: 76px !important;
       }
 
-      .myName,
-      .mySurName {
+      .mySurName,
+      .myName {
         width: 90px !important;
       }
     }
