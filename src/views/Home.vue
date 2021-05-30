@@ -9,6 +9,24 @@
       </div>
       <div class="summary">
         <div class="aboutMe">
+          <h3 class="headers">
+            Навыки
+          </h3>
+          <ul class="info">
+            <li>HTML5 CSS3 (less)</li>
+            <li>JavaScript</li>
+            <li>Ajax</li>
+            <li>
+              Vue.js (vuex, vulidate, axios, tailwind, customComponents,
+              vue-router (chank))
+            </li>
+            <li>Опыт работы с GIT</li>
+            <li>Адаптивная и кроссбраузерная вёрстка</li>
+            <li>Принципы разработки мобильных версий</li>
+            <li>Принципы семантической вёрстки</li>
+          </ul>
+        </div>
+        <div class="aboutMe">
           <h3 class="headers">Интересует</h3>
           <ul class="info">
             <li>Должность: Front-End разработчик</li>
@@ -17,21 +35,90 @@
             <li>График: гибкий, полная занятость</li>
           </ul>
         </div>
-        <div class="aboutMe">
-          <h3 class="headers"></h3>
-          <p class="info"></p>
-        </div>
         <div class="aboutMe" id="AM3">
-          <h3 class="headers"></h3>
-          <p class="info"></p>
+          <h3 class="headers">
+            Опыт работы
+          </h3>
+          <div class="AM3Info">
+            <div class="info infoBlock">
+              <p class="nameOfCompany">
+                <b>ООО "НИИАС-Старград"</b>, Москва -
+                <i>менеджер SEO-отдела, помощник системного администратора</i>
+              </p>
+              <p class="time">
+                январь 2019 - настоящее время
+              </p>
+              <p>
+                Ведение групп в социальных сетях, ведение рекламных кампаний,
+                развёртывание фреймворка на хостинге под интернет-магазин, подключение и
+                настройка плагинов к интернет-магазину, вёрстка
+                отдельных блоков сайтов, взаимодействие с
+                тех.поддержкой хостинг-провайдера, подключение
+                SSL-сертификатов сайту, введение администравтивной
+                информации на сайт.
+              </p>
+            </div>
+            <div class="info infoBlock">
+              <p class="nameOfCompany">
+                <b>ООО "НИИАС-Старград"</b>, Москва -
+                <i>контент-менеджер</i>
+              </p>
+              <p class="time">
+                ноябрь 2016 – январь 2019
+              </p>
+              <p>
+                Работа с товарными позициями
+                (добавление / коррекция / удаление),<br>
+                взаимодействие с
+                поставщиками, ведение складских остатков.
+              </p>
+            </div>
+            <div class="info infoBlock">
+              <p class="nameOfCompany">
+                <b>ООО "НИИАС-Старград"</b>, Остров-3, Ужур -
+                <i>служба в армии.</i>
+              </p>
+              <p class="time">
+                ноябрь 2015 – ноябрь 2016
+              </p>
+              <p></p>
+            </div>
+            <div class="info infoBlock">
+              <p class="nameOfCompany">
+                <b>ООО "НИИАС-Старград"</b>, Москва -
+                <i>сотрудник call-центра.</i>
+              </p>
+              <p class="time">
+                май 2014 – ноябрь 2015
+              </p>
+              <p>
+                Консультация клиентов, прием и сопровождение
+                заказов, ведение статистики заказов, коррекция
+                товарных позиций в рамках изменения цен и
+                коррекции характеристик товаров.
+              </p>
+            </div>
+          </div>
         </div>
+        <address class="aboutMe">
+          <h3 class="headers">
+            Личная информация
+          </h3>
+          <ul class="info">
+            <li>Дата рождения: 06.04.1995 (26 лет)</li>
+            <li>Адрес: Москва, Россия, 129343</li>
+            <li>Телефон: <a href="tel:89162559129">8(916)255-91-29</a></li>
+            <li>Почта: daniladoljaskiy@gmai.com</li>
+          </ul>
+        </address>
         <div class="aboutMe">
-          <h3 class="headers"></h3>
-          <p class="info"></p>
-        </div>
-        <div class="aboutMe">
-          <h3 class="headers"></h3>
-          <p class="info"></p>
+          <h3 class="headers">
+            Проекты:
+          </h3>
+          <ol class="info">
+            <li>Сайт портфолио</li>
+            <li>Сайт для школы танцев</li>
+          </ol>
         </div>
       </div>
     </main>
@@ -58,7 +145,7 @@ export default {
 .bodyHome {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 90px auto 20px;
+  grid-template-rows: 85px auto 20px;
   width: 90vw;
   height: 110vh;
 
@@ -119,7 +206,6 @@ export default {
 
     .summary {
       margin-top: 50px;
-      min-height: calc(100vh - 200px);
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
@@ -141,6 +227,50 @@ export default {
         .info {
           margin: 0;
           text-align: left!important;
+        }
+
+        .AM3Info {
+          margin: 0 7px;
+          padding-right: 2px;
+          height: 375px;
+          overflow-y: scroll;
+
+          .nameOfCompany{
+            margin-bottom: 2px;
+          }
+
+          .time {
+            margin: 0;
+            font-size: 0.8pc;
+            color: grey;
+          }
+        }
+
+        ::-webkit-scrollbar {
+          width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey;
+          border-radius: 10px;
+          margin-right: 5px !important;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: rgba(128, 128, 128, 0.5);
+          border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+          background: rgba(128, 128, 128, 0.7);
+        }
+
+        .infoBlock {
+          margin: 12px auto;
+          padding: 2px;
+          border-radius: 5px;
+          border-top: solid 1px black;
+          border-bottom: solid 1px black;
+          background-color: rgba(0, 0, 255, 0.07);
         }
       }
       #AM3 {
