@@ -2,8 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import image from '../views/image.vue'
 import LogIn from '../views/LogIn'
 import chekIn from '../views/chekIn'
-import recovery from '../views/recovery'
+// import recovery from '../views/recovery'
 import Home from '../views/Home'
+
+const recovery = () => import(/* webpackChunkName: "recovery" */ '../views/recovery')
 
 const routes = [
   {

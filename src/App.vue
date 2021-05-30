@@ -5,7 +5,7 @@
       <p v-if="this.$store.state.user.loggedIn" @click="this.$store.commit('SET_LOGGED_IN', false)">Выход</p>
       <p v-else>Вход</p>
     </router-link>
-    <router-link to="/image" class="link">Картинки</router-link>
+    <router-link to="/image" class="link">Изображения</router-link>
   </div>
   <router-view class="routerView"/>
 </template>

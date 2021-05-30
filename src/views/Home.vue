@@ -3,136 +3,35 @@
     <header class="header"></header>
     <main class="main">
       <div class="itsMe">
-        <img src="../views/@/assets/images/animals/22.jpg" alt="" class="logo">
+        <img src="../views/@/assets/images/myPhoto.jpg" alt="" class="logo">
         <h2 class="muFullName myName">Даниил</h2>
         <h2 class="muFullName mySurName">Должанский</h2>
       </div>
       <div class="summary">
-        <div class="infoBlock">
-          <h3 class="infoBlockName">
-            Первый блок
-          </h3>
-          <div class="infoBlockText">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
+        <div class="aboutMe">
+          <h3 class="headers">Интересует</h3>
+          <ul class="info">
+            <li>Должность: Front-End разработчик</li>
+            <li>З/П (на руки): ~550$</li>
+            <li>Работа в офисе</li>
+            <li>График: гибкий, полная занятость</li>
+          </ul>
         </div>
-        <div class="infoBlock">
-          <h3 class="infoBlockName">
-            Второй блок
-          </h3>
-          <div class="infoBlockText">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
+        <div class="aboutMe">
+          <h3 class="headers"></h3>
+          <p class="info"></p>
         </div>
-        <div class="infoBlock">
-          <h3 class="infoBlockName">
-            Третий блок
-          </h3>
-          <div class="infoBlockText">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
+        <div class="aboutMe" id="AM3">
+          <h3 class="headers"></h3>
+          <p class="info"></p>
         </div>
-        <div class="infoBlock">
-          <h3 class="infoBlockName">
-            Четвёртый блок
-          </h3>
-          <div class="infoBlockText">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
+        <div class="aboutMe">
+          <h3 class="headers"></h3>
+          <p class="info"></p>
         </div>
-        <div class="infoBlock">
-          <h3 class="infoBlockName">
-            Пятый блок
-          </h3>
-          <div class="infoBlockText">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </div>
-        <div class="infoBlock">
-          <h3 class="infoBlockName">
-            Шестой блок
-          </h3>
-          <div class="infoBlockText">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </div>
-        <div class="infoBlock">
-          <h3 class="infoBlockName">
-            Седьмой блок
-          </h3>
-          <div class="infoBlockText">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </div>
-        <div class="infoBlock">
-          <h3 class="infoBlockName">
-            Восьмой блок
-          </h3>
-          <div class="infoBlockText">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </div>
-        <div class="infoBlock">
-          <h3 class="infoBlockName">
-            Девятый блок
-          </h3>
-          <div class="infoBlockText">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
+        <div class="aboutMe">
+          <h3 class="headers"></h3>
+          <p class="info"></p>
         </div>
       </div>
     </main>
@@ -162,10 +61,6 @@ export default {
   grid-template-rows: 90px auto 20px;
   width: 90vw;
   height: 110vh;
-
-  .header {
-    border-radius: 5rem;
-  }
 
   .main {
     position: relative;
@@ -223,22 +118,40 @@ export default {
     }
 
     .summary {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      margin: 50px auto auto auto;
+      margin-top: 50px;
+      min-height: calc(100vh - 200px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-column-gap: 15px;
+      grid-row-gap: 15px;
 
-      .infoBlock {
-        margin: auto auto 15px auto;
-        width: 60vw;
-        border: solid 1px black;
-        border-radius: 25px;
+      .aboutMe {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px auto;
+        background-image: url("@/assets/images/bg_0.png");
+        border-radius: 2rem;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+
+        .headers {
+          margin: auto 0;
+        }
+
+        .info {
+          margin: 0;
+          text-align: left!important;
+        }
+      }
+      #AM3 {
+        grid-row-start: 2;
+        grid-row-end: 4;
       }
     }
   }
 
-  .footer {}
+  .footer {
+  }
 }
 
 @media screen and (max-width: 1366px) {
@@ -275,7 +188,7 @@ export default {
   .bodyHome {
     .itsMe {
       grid-template-rows: 45px 45px !important;
-      grid-template-columns: 90px 100px !important;
+      grid-template-columns: 90px 140px !important;
       column-gap: 10px;
       border-radius: 45px 7px 7px 45px !important;
 
