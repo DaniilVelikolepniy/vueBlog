@@ -226,7 +226,7 @@ export default {
 
         .info {
           margin: 0;
-          text-align: left!important;
+          text-align: left !important;
         }
 
         .AM3Info {
@@ -235,7 +235,7 @@ export default {
           height: 375px;
           overflow-y: scroll;
 
-          .nameOfCompany{
+          .nameOfCompany {
             margin-bottom: 2px;
           }
 
@@ -255,6 +255,7 @@ export default {
           border-radius: 10px;
           margin-right: 5px !important;
         }
+
         ::-webkit-scrollbar-thumb {
           background: rgba(128, 128, 128, 0.5);
           border-radius: 10px;
@@ -273,6 +274,7 @@ export default {
           background-color: rgba(0, 0, 255, 0.07);
         }
       }
+
       #AM3 {
         grid-row-start: 2;
         grid-row-end: 4;
@@ -296,6 +298,18 @@ export default {
 
       .muFullName {
         width: 150px;
+      }
+    }
+
+    .main {
+      margin-top: 0;
+
+      #AM3 {
+        height: 600px;
+
+        .AM3Info {
+          height: 500px;
+        }
       }
     }
   }
@@ -330,6 +344,21 @@ export default {
       .myName,
       .mySurName {
         width: 100px !important;
+      }
+    }
+
+    .main {
+      padding-left: 25px;
+      padding-right: 25px;
+
+      .summary {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto;
+
+        .aboutMe:last-child {
+          padding-bottom: 10px;
+        }
       }
     }
   }
