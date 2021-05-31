@@ -108,7 +108,7 @@
             <li>Дата рождения: 06.04.1995 (26 лет)</li>
             <li>Адрес: Москва, Россия, 129343</li>
             <li>Телефон: <a href="tel:89162559129">8(916)255-91-29</a></li>
-            <li>Почта: daniladoljaskiy@gmai.com</li>
+            <li>Почта: daniladoljaskiy@gmail.com</li>
           </ul>
         </address>
         <div class="aboutMe">
