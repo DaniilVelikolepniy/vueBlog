@@ -166,7 +166,7 @@ export default {
     padding: 5px;
     border-radius: 1em;
     color: @color;
-    background-image: url("../assets/bg_1.jpg");
+    background-image: url("../../public/images/bg_1.jpg");
     text-align: center;
     box-shadow: 5px 5px 35px black;
 
@@ -196,7 +196,7 @@ export default {
       grid-template-columns: 1fr;
       grid-template-rows: 85px 85px 85px 85px 85px 85px;
       padding: 0 10px 15px 10px;
-      background-image: url("../assets/bg_1.jpg");
+      background-image: url("../../public/images/bg_1.jpg");
       border-radius: 25px;
       box-shadow: 5px 5px 35px black;
 

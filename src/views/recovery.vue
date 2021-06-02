@@ -66,7 +66,7 @@ export default {
     border-radius: 15px;
     box-shadow: 5px 5px 35px black;
     color: @color;
-    background-image: url("../assets/bg_1.jpg");
+    background-image: url("../../public/images/bg_1.jpg");
   }
 
   .main {
@@ -79,7 +79,7 @@ export default {
       grid-template-columns: 1fr;
       grid-template-rows: 60px 60px;
       padding: 0 10px 10px 10px;
-      background-image: url("../assets/bg_1.jpg");
+      background-image: url("../../public/images/bg_1.jpg");
       border-radius: 25px;
       box-shadow: 5px 5px 35px black;
 

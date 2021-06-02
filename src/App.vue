@@ -31,7 +31,7 @@ body {
     text-align: center;
     min-height: 100vh;
     width: 100vw;
-    background-image: url("assets/kirpitch.png");
+    background-image: url("../public/images/kirpitch.png");
 
     .nav {
       display: grid;
@@ -39,7 +39,7 @@ body {
       grid-template-rows: 30px 30px;
       height: 100vh;
       float: left;
-      background-image: url("assets/bg_1.jpg");
+      background-image: url("../public/images/bg_1.jpg");
       box-shadow: 0 2px 15px black;
 
       .link {

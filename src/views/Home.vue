@@ -3,7 +3,7 @@
     <header class="header"></header>
     <main class="main">
       <div class="itsMe">
-        <img src="../views/@/assets/images/myPhoto.jpg" alt="" class="logo">
+        <img src="../../public/images/images/myPhoto.jpg" alt="" class="logo">
         <h2 class="muFullName myName">Даниил</h2>
         <h2 class="muFullName mySurName">Должанский</h2>
       </div>
@@ -155,7 +155,7 @@ export default {
     padding: 10px;
     width: 70vw;
     border-radius: 7px;
-    background-image: url("@/assets/images/bg_1.jpg");
+    background-image: url("../../public/images/bg_1.jpg");
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
     .itsMe {
@@ -166,7 +166,7 @@ export default {
       grid-template-columns: 100px 200px;
       column-gap: 30px;
       -moz-column-gap: 30px;
-      background-image: url("@/assets/images/bg_0.png");
+      background-image: url("../../public/images/bg_0.png");
       border-radius: 50px 7px 7px 50px;
       padding: 0 10px 0 0;
       box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5);
@@ -216,7 +216,7 @@ export default {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 60px auto;
-        background-image: url("@/assets/images/bg_0.png");
+        background-image: url("../../public/images/bg_0.png");
         border-radius: 2rem;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 
