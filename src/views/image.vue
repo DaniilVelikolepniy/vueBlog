@@ -252,7 +252,7 @@ export default {
     border-radius: 15px;
     box-shadow: 5px 5px 35px black;
     color: @color;
-    background-image: url("../assets/bg_1.jpg");
+    background-image: url("../../public/images/bg_1.jpg");
   }
 
   .tabs {
