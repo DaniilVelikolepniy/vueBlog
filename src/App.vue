@@ -22,7 +22,7 @@ body {
     //display: inline-block;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Chrome/Safari/Opera */
-    -khtml-user-select: none; /* Konqueror */
+    //-khtml-user-select: none;  Konqueror
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     font-family: Avenir, Helvetica, Arial, sans-serif;
